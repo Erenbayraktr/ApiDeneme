@@ -1,0 +1,27 @@
+﻿@model List<ApiDeneme.Models.islem>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tarih</th>
+            <th>Toplam İşlem Miktarı</th>
+            <th>Toplam İşlem Tutarı</th>
+            <th>Ağırlıklı Ortalama Fiyat</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trade in Model)
+        {
+
+            <tr>
+                <td>@trade.Tarih</td>
+                <td>@trade.toplamIslem</td>
+                <td>@trade.toplamIslemFiyat</td>
+                <td>@trade.agirlikliOrtalama</td>
+            </tr>
+        }
+    </tbody>
+</table>
